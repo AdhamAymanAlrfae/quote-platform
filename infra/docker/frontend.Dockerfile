@@ -1,1 +1,11 @@
-FROM node:18
+FROM node:20-bullseye
+
+WORKDIR /app
+
+COPY frontend/package.json frontend/package-lock.json ./
+RUN npm ci --legacy-peer-deps
+
+COPY frontend/ .
+
+EXPOSE 3000
+CMD ["npm", "run", "dev"]

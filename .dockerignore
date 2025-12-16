@@ -1,1 +1,56 @@
-../frontend/node_modules
+# ========================
+# Root .gitignore for Quote Platform
+# ========================
+
+# -------- Backend (Python/FastAPI) --------
+/backend/__pycache__/
+/backend/*.py[cod]
+/backend/.venv/
+/backend/venv/
+/backend/env/
+/backend/*.egg-info/
+/backend/.mypy_cache/
+/backend/.pytest_cache/
+/backend/htmlcov/
+/backend/.env
+/backend/.env.*
+/backend/*.sqlite3
+
+!/backend/.env.example
+
+
+# -------- Frontend (Next.js/Node) --------
+
+/frontend/node_modules/
+/frontend/.next/
+/frontend/out/
+/frontend/build/
+/frontend/.env
+/frontend/.env.*
+/frontend/.vercel
+/frontend/.pnp
+/frontend/.pnp.js
+/frontend/coverage
+/frontend/*.tsbuildinfo
+/frontend/next-env.d.ts
+
+# !/frontend/.env.example
+
+
+# -------- Infra / DevOps --------
+/infra/**/*.log
+/infra/*.env
+
+!/infra/.env.example
+
+
+
+# -------- General / OS / Editor --------
+.DS_Store
+*.pem
+*.log
+.idea/
+*.swp
+*.swo
+
+.venv
